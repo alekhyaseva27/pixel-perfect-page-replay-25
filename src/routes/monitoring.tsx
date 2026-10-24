@@ -21,7 +21,7 @@ function Monitoring() {
   const { t, lang } = useI18n();
   const locName = useLocName();
   const { readings } = useData();
-  const [loc, setLoc] = useState(LOCATIONS[0].id);
+  const [loc, setLoc] = useState(LOCATIONS[0]!.id);
   const rows = readings.filter((r) => r.locationId === loc).sort((a, b) => a.timestamp.localeCompare(b.timestamp));
   const latest = rows.at(-1);
   const data = rows.slice(-14).map((r) => ({ ...r, label: new Date(r.timestamp).toLocaleDateString(lang === "te" ? "te-IN" : "en-IN", { day: "numeric", month: "short" }) }));

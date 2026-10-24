@@ -26,7 +26,7 @@ export function WarningBanner({ level }: { level: RiskLevel }) {
       <Icon className="mt-0.5 h-6 w-6 shrink-0" aria-hidden />
       <div>
         <p className="font-bold">{t(high ? "warn.high" : "warn.moderate")}</p>
-        <p className="text-sm">{t(STEPS[level][0])}</p>
+        <p className="text-sm">{t(STEPS[level][0]!)}</p>
       </div>
     </div>
   );

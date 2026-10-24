@@ -33,7 +33,7 @@ function Analyze() {
   const { t } = useI18n();
   const locName = useLocName();
   const { addReading } = useData();
-  const [loc, setLoc] = useState(LOCATIONS[0].id);
+  const [loc, setLoc] = useState(LOCATIONS[0]!.id);
   const [vals, setVals] = useState<Record<string, string>>({ ph: "", turbidity: "", temperature: "", tds: "" });
   const [errors, setErrors] = useState<FieldErrors>({});
   const [result, setResult] = useState<Assessment | null>(null);

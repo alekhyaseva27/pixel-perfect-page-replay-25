@@ -60,7 +60,7 @@ function Alerts() {
                   </div>
                   <p className="font-semibold">{locName(a.locationId)}</p>
                   <p className="text-sm text-muted-foreground">
-                    <span className="font-medium text-foreground">{t("alerts.action")}:</span> {t(STEPS[a.level][0])} {t(STEPS[a.level][1])}
+                    <span className="font-medium text-foreground">{t("alerts.action")}:</span> {t(STEPS[a.level][0]!)} {t(STEPS[a.level][1]!)}
                   </p>
                 </div>
                 {a.acknowledged ? (
