@@ -69,7 +69,7 @@ export function buildDemoData(): { readings: Reading[]; alerts: Alert[] } {
   const readings: Reading[] = [];
   const alerts: Alert[] = [];
   for (const loc of LOCATIONS) {
-    const p = PROFILE[loc.id];
+    const p = PROFILE[loc.id]!;
     for (let d = 13; d >= 0; d--) {
       const trend = (13 - d) * p.drift;
       const ph = r1(p.ph + (rand() - 0.5) * 0.6 - (loc.id === "L6" ? trend : 0));
